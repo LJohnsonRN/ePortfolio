@@ -1,7 +1,139 @@
-<html>
-<title>ePortfolio</title>
-<body>
-  <h1>ePortfolio</h1>
-  <p>Test page.</p>
+<!DOCTYPE html>
+<html lang="en">
+<!-- https://foolishdeveloper.com/navigation-bar-html-css-javascript/ -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lauren Johnson</title>
+  <link rel="icon" type="image/x-icon" href="media/favicon.ico">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<style>
+.navbox {
+  width: 42px;
+  height: 42px;
+  background-color: #0d2b3a;
+  opacity: 25%;
+  border-radius: 20px;
+  margin: 6px 12px;
+  position: relative;
+  transition: width 0.5s ease,
+              opacity 0.5s ease,
+              background-color 0.5s ease,
+              font-size 0.5s ease;
+  font-size: 0;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbox:hover {
+  width: 128px;
+  opacity: 90%;
+  background-color: #08abcf;
+}
+.navbox span {
+  opacity: 0%;
+  transition: opacity 0.5s ease;
+  position: absolute;
+}
+.navbox:hover span {
+  opacity: 100%;
+  font-size: 18px;
+}
+.navbox a {
+  color: #ffffff;
+  text-decoration: none;
+}
+</style>
+<script>
+/* function hoverNavbox(navbox) {
+  navbox.classList.add('hovered');
+}
+function unhoverNavbox(navbox) {
+  setTimeout(() => { navbox.classList.remove('hovered'); }, 2000);
+} */
+</script>
+<body style="background-color: lightblue;
+             color:#0d2b3a;
+             font-family: 'Century Gothic';
+             margin: 0px;
+             padding: 0px;">
+  <!-- background -->
+  <img style="width: 100%;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              z-index: 0;"
+       src="media/background.webp">
+  <!-- name -->
+  <img style="width: 33%;
+              position: absolute;
+              margin-left: 55%;
+              z-index: 1;"
+       src="media/name.webp">
+  <!-- navigation -->
+  <div style="position: fixed;
+              top: 4px;
+              right: 4px;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              z-index: 3;">
+    <div class="navbox">
+      <span><a href="media/LEJ_Resume.pdf" target="_blank">Résumé</a></span>
+    </div>
+    <div class="navbox">
+      <span><a href="media/LEJ_CurriculumVitae.pdf" target="_blank">Curriculum Vitae</a></span>
+    </div>
+    <div class="navbox">
+      <span><a href="#philosophy">Philosophy</a></span>
+    </div>
+    <!-- <div class="navbox">
+      <span><a href="#">Media</a></span>
+    </div> -->
+  </div>
+  <!-- padding -->
+  <div style="width: 100%;
+              height: 0px;
+              padding-bottom: calc(22.5% + 1.5vw);">
+  </div>
+  <section id="philosophy">  
+    <div style="width: 80%;
+                max-width: 1024px;
+                margin: 0 auto;
+                font-size: 22px;
+                position: relative;
+                z-index: 2;">
+      <img style="opacity: 7.5%;
+                  position: absolute;
+                  top: 15%;
+                  left: 5%;
+                  max-width: 90%;
+                  translate: translate(-50%, -50%);
+                  z-index: 1;"
+           src="media/gratitude.webp">
+      <h2>Personal Philosophy</h2>
+      <p>I believe that every moment has value, and that the measure of a moment is defined by what we put into it, not necessarily what we get out of it.  Being a society of productivity, we have a tendency to fixate on the outcome, and if we cannot show a tangible result, we discount the contribution.  Often we are held to productivity standards, using volume to measure success.  I argue that, in any context of human service, the depth of our interactions is the true measure, and that we can maintain efficiency without sacrificing meaningful human exchange.  A moment used to offer our complete attention to another in need of it yields results not measured by time spent or saved.</p> 
+      <p>A moment used to reconnect with our core compass generates a very rich asset; in order to be fully present and of service to others, we must first establish our own inner stability.  By taking the time to nourish our own needs, we have the resources to give of ourselves without depletion.  Too often, self is sacrificed for the sake of squeezing more out of the time at hand or for increasing monetary compensation.</p>
+      <p>This well-being is deeply intertwined with our social connections.  No one can flourish in isolation, and the strength of a community lies in its capacity to nurture the individual without sacrificing the whole.  Building a thriving community is a collective endeavor.  When we honor our unique strengths and acknowledge our vulnerabilities, we create space for genuine compassion and understanding. Rather than fixating solely on what each of us can individually contribute, we must cultivate a culture of communal well-being.  By focusing on the needs of the community, our intention becomes ensuring that those needs are met, not where solutions originate or who receives recognition.</p>
+      <p>Furthermore, regardless of our education, training, or experience, we are all human, subject to faults and weaknesses.  In this spirit, we must extend grace not only to those we serve but also to our peers, recognizing that we are all imperfect beings who are learning and growing together.  Most importantly, we need to afford ourselves the same kindness we would offer to others.</p>
+      <p>The values of compassion, understanding, and mutual respect that underlie community building are also essential in healthcare, where our goal is to empower patients and support their autonomy, rather than simply providing care.  As healthcare professionals, our role is not to dictate care but to help patients tap into their own innate body wisdom.  I believe that each individual possesses an inherent ability to navigate their own health.  While this ability may be obscured by life circumstances, honoring its existence is a respect that should be afforded to every patient.  This is foundational to a healthcare relationship that thrives on mutual respect and collaboration.</p>
+      <p>When solutions are imposed upon patients, we risk undermining their autonomy and potential for genuine healing. Instead, we must listen attentively and help nurture their self-awareness, encouraging patients to engage in being the expert of their own body.  When patients become active partners in their health journey, they are better equipped to make decisions that are right for them.  The service of healthcare should celebrate the individuality of each patient, even when we may not agree with the choices they make.</p>
+      <p>This personal and professional philosophy, while admittedly idealistic, encapsulates concepts of community and compassion coupled with empowerment and grace.  These principles shape not only my work in healthcare but also a broad sense of what I wish to see reflected in our global society.</p>
+    </div>
+  </section>
+  <section id="media">
+    <!-- <img style="width:50%;z-index:1;" src="media/ResearchProject.jpg">
+    <a href="media/GroupProjectPoster.pdf" target="_blank">
+      <img style="width:100%;" src="media/GroupProjectPoster.jpg">
+    </a>
+    <video style="margin: auto" width="80%" controls>
+      <source src="media/PublicHealthTeachingProject.mp4" type="video/mp4">
+      Apparently video is not supported in this browser.
+    </video> -->
+  </section>
 </body>
 </html>
