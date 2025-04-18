@@ -9,11 +9,15 @@
   <!-- <link rel="stylesheet" href="styles.css"> -->
 </head>
 <style>
+@font-face {
+  font-family: Montserrat;
+  src: url(media/Montserrat-VariableFont_wght.ttf);
+}
 .navbox {
   width: 42px;
   height: 42px;
-  background-color: #0d2b3a;
-  opacity: 25%;
+  background-color: #08abcf;/*#0d2b3a;*/
+  opacity: 50%;
   border-radius: 20px;
   margin: 6px 12px;
   position: relative;
@@ -44,7 +48,7 @@
   font-size: 18px;
 }
 .navbox a {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
 }
 </style>
@@ -57,8 +61,8 @@ function unhoverNavbox(navbox) {
 } */
 </script>
 <body style="background-color: lightblue;
-             color:#0d2b3a;
-             font-family: 'Century Gothic';
+             color: #0d2b3a;
+             font-family: 'Montserrat';
              margin: 0px;
              padding: 0px;">
   <!-- background -->
@@ -83,10 +87,10 @@ function unhoverNavbox(navbox) {
               align-items: flex-end;
               z-index: 3;">
     <div class="navbox">
-      <span><a href="media/LEJ_Resume.pdf" target="_blank">Résumé</a></span>
+      <span><a href="media/LJohnson_Resume.pdf" target="_blank">Résumé</a></span>
     </div>
     <div class="navbox">
-      <span><a href="media/LEJ_CurriculumVitae.pdf" target="_blank">Curriculum Vitae</a></span>
+      <span><a href="media/LJohnson_CurriculumVitae.pdf" target="_blank">Curriculum Vitae</a></span>
     </div>
     <div class="navbox">
       <span><a href="#philosophy">Philosophy</a></span>
@@ -100,7 +104,7 @@ function unhoverNavbox(navbox) {
               height: 0px;
               padding-bottom: calc(22.5% + 1.5vw);">
   </div>
-  <section id="philosophy">  
+  <section id="philosophy">
     <div style="width: 80%;
                 max-width: 1024px;
                 margin: 0 auto;
@@ -115,6 +119,7 @@ function unhoverNavbox(navbox) {
                   translate: translate(-50%, -50%);
                   z-index: 1;"
            src="media/gratitude.webp">
+      <p style="font-size: 12px">(work in progress)</p>
       <h2>Personal Philosophy</h2>
       <p>I believe that every moment has value, and that the measure of a moment is defined by what we put into it, not necessarily what we get out of it.  Being a society of productivity, we have a tendency to fixate on the outcome, and if we cannot show a tangible result, we discount the contribution.  Often we are held to productivity standards, using volume to measure success.  I argue that, in any context of human service, the depth of our interactions is the true measure, and that we can maintain efficiency without sacrificing meaningful human exchange.  A moment used to offer our complete attention to another in need of it yields results not measured by time spent or saved.</p> 
       <p>A moment used to reconnect with our core compass generates a very rich asset; in order to be fully present and of service to others, we must first establish our own inner stability.  By taking the time to nourish our own needs, we have the resources to give of ourselves without depletion.  Too often, self is sacrificed for the sake of squeezing more out of the time at hand or for increasing monetary compensation.</p>
@@ -125,8 +130,8 @@ function unhoverNavbox(navbox) {
       <p>This personal and professional philosophy, while admittedly idealistic, encapsulates concepts of community and compassion coupled with empowerment and grace.  These principles shape not only my work in healthcare but also a broad sense of what I wish to see reflected in our global society.</p>
     </div>
   </section>
-  <section id="media">
-    <!-- <img style="width:50%;z-index:1;" src="media/ResearchProject.jpg">
+  <!-- <section id="media">
+    <img style="width:50%;z-index:1;" src="media/ResearchProject.jpg">
     <a href="media/GroupProjectPoster.pdf" target="_blank">
       <img style="width:100%;" src="media/GroupProjectPoster.jpg">
     </a>
