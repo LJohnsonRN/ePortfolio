@@ -1,3 +1,11 @@
+body {
+  background-color: lightblue;
+  color: #0d2b3a;
+  font-family: 'Montserrat';
+  margin: 0px;
+  padding: 0px;
+}
+
 @font-face {
   font-family: Montserrat;
   src: url(media/Montserrat-VariableFont_wght.ttf);
