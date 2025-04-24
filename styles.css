@@ -11,45 +11,51 @@ body {
   src: url(media/Montserrat-VariableFont_wght.ttf);
 }
 
-.navbox {
-  width: 42px;
-  height: 42px;
-  background-color: #08abcf; /* #0d2b3a; */
-  opacity: 50%;
-  border-radius: 20px;
-  margin: 6px 12px;
-  position: relative;
-  transition: width 0.5s ease,
-  opacity 0.5s ease,
-  background-color 0.5s ease,
-  font-size 0.5s ease;
-  font-size: 0;
-  text-align: center;
-  overflow: hidden;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#menu-toggle {
+  position: fixed;
+  width: calc(2% + 0.5vw);
+  top: 2%;
+  right: 2%;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 11;
 }
 
-.navbox:hover {
-  width: 128px;
-  opacity: 90%;
-  background-color: #08abcf;
+.menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(122, 209, 234, 0.75);
+  color: #0d2b3a;
+  text-align: left;
+  transition: right 0.5s ease;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: 10;
 }
 
-.navbox span {
-  opacity: 0%;
-  transition: opacity 0.5s ease;
-  position: absolute;
+.menu ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.navbox:hover span {
-  opacity: 100%;
-  font-size: 18px;
+.menu li {
+  padding: 15px 20px;
 }
 
-.navbox a {
-  color: white;
+.menu a {
+  color: #0d2b3a;
   text-decoration: none;
+  font-weight: 500;
+  transition: font-weight 0.25s ease;
+}
+
+.menu a:hover {
+  font-weight: 750;
+}
+
+.menu.show {
+  right: 0;
 }

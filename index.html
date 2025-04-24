@@ -20,35 +20,19 @@
   <img style="width: 33%;
               position: absolute;
               margin-left: 55%;
-              z-index: 1;"
+              z-index: 0;"
        src="media/name.webp">
   <!-- navigation -->
-  <div style="position: fixed;
-              top: 4px;
-              right: 4px;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-end;
-              z-index: 3;">
-    <div class="navbox">
-      <span>
-        <a href="media/LJohnson_Resume.pdf" target="_blank">Résumé</a>
-      </span>
-    </div>
-    <div class="navbox">
-      <span>
-        <a href="media/LJohnson_CurriculumVitae.pdf" target="_blank">Curriculum Vitae</a>
-      </span>
-    </div>
-    <div class="navbox">
-      <span>
-        <a href="#philosophy">Philosophy</a>
-      </span>
-    </div>
-    <div class="navbox">
-      <span><a href="#media">Media</a></span>
-    </div>
-  </div>
+  <img id="menu-toggle" src="media/hamburger.svg">
+  <nav id="side-menu" class="menu">
+    <ul>
+      <li><a href="media/LJohnson_Resume.pdf" class="menu-item" target="_blank">Résumé</a></li>
+      <li><a href="media/LJohnson_CurriculumVitae.pdf" class="menu-item" target="_blank">Curriculum Vitae</a></li>
+      <li><a href="#philosophy" class="menu-item">Philosophy</a></li>
+      <li><a href="#media" class="menu-item">Media</a></li>
+    </ul>
+  </nav>
+  <script src="script.js"></script>
   <!-- padding -->
   <div style="width: 100%;
               height: 0px;
