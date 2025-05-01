@@ -14,6 +14,9 @@ const menuItems = document.querySelectorAll('.menu-item');
 menuItems.forEach(item => {
   item.addEventListener('click', function() {
     const menu = document.getElementById('side-menu');
+    const hamburger = document.getElementById('menu-toggle');
+    rotation = 0;
+    hamburger.style.transform = `rotate(${rotation}deg)`;
     menu.classList.remove('show');
   });
 });
