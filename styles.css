@@ -1,14 +1,24 @@
 body {
   background-color: lightblue;
   color: #0d2b3a;
-  font-family: 'Montserrat';
+  font-family: 'OpenSans', sans-serif;
   margin: 0px;
   padding: 0px;
 }
 
 @font-face {
-  font-family: Montserrat;
-  src: url(media/Montserrat-VariableFont_wght.ttf);
+  font-family: 'OpenSans';
+  src: url('media/OpenSans-VariableFont_wdth,wght.ttf');
+}
+
+h2 {
+  font-family: 'OpenSans';
+  font-weight: 600;
+}
+
+h3 {
+  font-family: 'OpenSans';
+  font-weight: 600;
 }
 
 #menu-toggle {
@@ -56,7 +66,7 @@ body {
 }
 
 .menu a:hover {
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .menu.show {
