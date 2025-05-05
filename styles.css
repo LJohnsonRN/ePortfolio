@@ -11,14 +11,17 @@ body {
   src: url('media/OpenSans-VariableFont_wdth,wght.ttf');
 }
 
-h2 {
+h2, h3, h4 {
   font-family: 'OpenSans';
   font-weight: 600;
 }
 
-h3 {
-  font-family: 'OpenSans';
-  font-weight: 600;
+.background {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
 }
 
 #menu-toggle {
@@ -73,13 +76,41 @@ h3 {
   right: 0;
 }
 
-.footer {
-  width: 90%;
-  margin: 0 auto;
-  font-size: 12px;
+.name {
+  width: 33%;
+  position: absolute;
+  margin-left: 55%;
+  z-index: 0;
 }
 
-.footer a {
-  font-weight: 700;
-  color: #0d2b3a;
+.top-pad {
+  width: 100%;
+  height: 0px;
+  padding-bottom: calc(22.5% + 1.5vw);
+}
+
+.gratitude {
+  opacity: 5%;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  max-width: 90%;
+  translate: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.content {
+  width: 80%;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-size: 22px;
+  position: relative;
+  z-index: 2;
+}
+
+.footer {
+  padding-top: calc(10% + 1.5vw);
+  width: 80%;
+  margin: 0 auto;
+  font-size: 12px;
 }
