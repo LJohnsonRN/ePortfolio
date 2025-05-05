@@ -108,6 +108,21 @@ h2, h3, h4 {
   z-index: 2;
 }
 
+.link-small {
+  color: #0d2b3a;
+  font-weight: 600;
+}
+
+.link-big {
+  color: #0d2b3a;
+  font-weight: 600;
+  transition: font-weight 0.25s ease;
+}
+
+.link-big:hover {
+  font-weight: 700;
+}
+
 .footer {
   padding-top: calc(10% + 1.5vw);
   width: 80%;

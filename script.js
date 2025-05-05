@@ -1,3 +1,4 @@
+// toggle side navigation and rotate hamburger menu
 let rotation = 0;
 document.getElementById('menu-toggle').addEventListener('click', function() {
   const menu = document.getElementById('side-menu');
@@ -20,3 +21,21 @@ menuItems.forEach(item => {
     menu.classList.remove('show');
   });
 });
+
+// loads footer on each page
+function loadFooter() {
+  fetch('footer.html')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not okay: ' + response.statusText);
+    }
+    return response.text();
+  })
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  })
+  .catch(error => {
+    console.error('Fetch error:', error);
+  });
+}
+document.addEventListener('DOMContentLoaded', loadFooter);
