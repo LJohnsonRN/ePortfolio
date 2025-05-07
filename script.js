@@ -22,6 +22,24 @@ menuItems.forEach(item => {
   });
 });
 
+// loads background on each page
+function loadBackground() {
+  fetch('background.html')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not okay: ' + response.statusText);
+    }
+    return response.text();
+  })
+  .then(data => {
+    document.getElementById('background').innerHTML = data;
+  })
+  .catch(error => {
+    console.error('Fetch error:', error);
+  });
+}
+document.addEventListener('DOMContentLoaded', loadBackground);
+
 // loads footer on each page
 function loadFooter() {
   fetch('footer.html')
