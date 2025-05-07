@@ -13,7 +13,8 @@ body {
 
 h2, h3, h4 {
   font-family: 'OpenSans';
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: 4px;
 }
 
 .background {
