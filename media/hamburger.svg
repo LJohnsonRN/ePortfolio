@@ -20,12 +20,12 @@
      borderopacity="0.25"
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
+     inkscape:pagecheckerboard="true"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.5946522"
-     inkscape:cx="259.81574"
-     inkscape:cy="196.75367"
+     inkscape:cx="258.97491"
+     inkscape:cy="331.28609"
      inkscape:window-width="1472"
      inkscape:window-height="891"
      inkscape:window-x="0"
@@ -33,15 +33,79 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
-     id="defs1" />
+     id="defs1">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter6"
+       x="-0.043041197"
+       y="-0.25760272"
+       width="1.0860824"
+       height="1.5152054">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.1213455"
+         id="feGaussianBlur6" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter7"
+       x="-0.043041197"
+       y="-0.25760272"
+       width="1.0860824"
+       height="1.5152054">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.1213455"
+         id="feGaussianBlur7" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter8"
+       x="-0.043041197"
+       y="-0.25760272"
+       width="1.0860824"
+       height="1.5152054">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.1213455"
+         id="feGaussianBlur8" />
+    </filter>
+  </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-46.24894,-34.293427)">
+    <rect
+       style="fill:#aad6ec;fill-opacity:1;stroke-width:1.35297;filter:url(#filter6)"
+       id="rect7"
+       width="118.28735"
+       height="19.76388"
+       x="51.105267"
+       y="125.45315"
+       ry="9.8819399" />
+    <rect
+       style="fill:#aad6ec;fill-opacity:1;stroke-width:1.35297;filter:url(#filter8)"
+       id="rect6"
+       width="118.28735"
+       height="19.76388"
+       x="51.105267"
+       y="88.411484"
+       ry="9.8819399" />
+    <rect
+       style="fill:#aad6ec;fill-opacity:1;stroke-width:1.35297;filter:url(#filter7)"
+       id="rect4"
+       width="118.28735"
+       height="19.76388"
+       x="51.105267"
+       y="51.369827"
+       ry="9.8819399" />
     <g
        id="g3"
-       transform="translate(7.5259519,19.092874)">
+       transform="translate(7.5259523,19.092874)">
       <rect
          style="fill:#0d2b3a;fill-opacity:1;stroke-width:1.17951"
          id="rect1"
