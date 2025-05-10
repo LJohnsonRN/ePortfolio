@@ -1,30 +1,46 @@
-// toggle side navigation and rotate hamburger menu
 let rotation = 0;
-document.getElementById('menu-toggle').addEventListener('click', function() {
-  const menu = document.getElementById('side-menu');
-  menu.classList.toggle('show');
-  if (rotation === 0) {
-    rotation = -180;
-  } else {
-    rotation = 0;
-  }
-  this.style.transform = `rotate(${rotation}deg)`;
-});
-
+const menu = document.getElementById('side-menu');
+const hamburger = document.getElementById('menu-toggle');
 const menuItems = document.querySelectorAll('.menu-item');
-menuItems.forEach(item => {
-  item.addEventListener('click', function() {
-    const menu = document.getElementById('side-menu');
-    const hamburger = document.getElementById('menu-toggle');
-    rotation = 0;
-    hamburger.style.transform = `rotate(${rotation}deg)`;
+
+function rotateHamburger() {
+  if (rotation === 0) {
+    rotation = -180
+  } else {
+    rotation = 0
+  }
+  hamburger.style.transform = `rotate(${rotation}deg)`;
+}
+
+function toggleMenu() {
+  if (menu.classList.contains('show')) {
     menu.classList.remove('show');
+  } else {
+    menu.classList.toggle('show');
+  }
+}
+
+// toggle side navigation and rotate hamburger menu
+const menuFunctions = [rotateHamburger, toggleMenu];
+menuFunctions.forEach (func => {
+  hamburger.addEventListener('click', func);
+});
+menuItems.forEach(item => {
+  menuFunctions.forEach(func => {
+    item.addEventListener('click', func);
   });
 });
+document.addEventListener('click', function(event) {
+  if (menu.classList.contains('show')
+  && ! menu.contains(event.target)
+  && event.target !== hamburger) {
+    rotateHamburger();
+    toggleMenu();
+  }
+});
 
-// loads background on each page
-function loadBackground() {
-  fetch('background.html')
+function loadChunk(chunk) {
+  fetch(chunk + '.html')
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not okay: ' + response.statusText);
@@ -32,28 +48,15 @@ function loadBackground() {
     return response.text();
   })
   .then(data => {
-    document.getElementById('background').innerHTML = data;
+    document.getElementById(chunk).innerHTML = data;
   })
   .catch(error => {
     console.error('Fetch error:', error);
   });
 }
-document.addEventListener('DOMContentLoaded', loadBackground);
 
-// loads footer on each page
-function loadFooter() {
-  fetch('footer.html')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not okay: ' + response.statusText);
-    }
-    return response.text();
-  })
-  .then(data => {
-    document.getElementById('footer').innerHTML = data;
-  })
-  .catch(error => {
-    console.error('Fetch error:', error);
-  });
-}
-document.addEventListener('DOMContentLoaded', loadFooter);
+// load external HTML chunks
+const htmlChunks = ['background', 'footer'];
+htmlChunks.forEach (chunk => {
+  document.addEventListener('DOMContentLoaded', loadChunk(chunk));
+});
