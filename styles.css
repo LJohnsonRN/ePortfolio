@@ -22,14 +22,14 @@ h2, h3, h4 {
   position: absolute;
   top: 0px;
   left: 0px;
-  z-index: 0;
+  z-index: -1;
 }
 
 #menu-toggle {
   position: fixed;
   width: calc(2% + 0.5vw);
-  min-width: 20px;
-  max-width: 28px;
+  min-width: 24px;
+  max-width: 32px;
   top: 2%;
   right: 2%;
   font-size: 16px;
@@ -117,7 +117,8 @@ h2, h3, h4 {
 
 .link-big {
   color: #0d2b3a;
-  font-weight: 600;
+  text-decoration: none;
+  font-weight: 500;
   transition: font-weight 0.25s ease;
 }
 
